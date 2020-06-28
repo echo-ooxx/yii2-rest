@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist yii2rest/yii2-rest "*"
+php composer.phar require --prefer-dist echo-ooxx/yii2-rest "*"
 ```
 
 or add
 
 ```
-"yii2rest/yii2-rest": "*"
+"echo-ooxx/yii2-rest": "*"
 ```
 
 to the require section of your `composer.json` file.
