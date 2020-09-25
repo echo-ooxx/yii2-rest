@@ -25,7 +25,7 @@ class BaseController extends Controller
      * @var array|string the configuration for creating the serializer that formats the response data.
      */
     public $serializer = [
-        'class' => 'echoooxx\yii2Rest\Serializer',
+        'class' => 'echoooxx\yii2rest\Serializer',
         'collectionEnvelope' => 'items',
     ];
     /**
