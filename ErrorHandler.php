@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by IntelliJ IDEA.
  * User: leezhang
@@ -26,8 +27,8 @@ class ErrorHandler extends \yii\web\ErrorHandler
         } else {
             $response = new Response();
         }
-
-        $response->setStatusCodeByException($exception);
+        
+        // $response->setStatusCodeByException($exception);
 
         if (null !== $this->errorAction) {
             $result = Yii::$app->runAction($this->errorAction);
@@ -56,6 +57,8 @@ class ErrorHandler extends \yii\web\ErrorHandler
         } else {
             $response->data = $this->convertExceptionToArray($exception);
         }
+
+        $response->setStatusCode();
 
         $response->send();
     }
