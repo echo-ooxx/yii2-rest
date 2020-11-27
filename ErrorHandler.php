@@ -29,6 +29,7 @@ class ErrorHandler extends \yii\web\ErrorHandler
         }
         
         // $response->setStatusCodeByException($exception);
+        $response->setStatusCode(200);
 
         if (null !== $this->errorAction) {
             $result = Yii::$app->runAction($this->errorAction);
@@ -57,9 +58,7 @@ class ErrorHandler extends \yii\web\ErrorHandler
         } else {
             $response->data = $this->convertExceptionToArray($exception);
         }
-
-        $response->setStatusCode();
-
+        
         $response->send();
     }
 }
