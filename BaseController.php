@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by IntelliJ IDEA.
  * User: leezhang
@@ -138,14 +139,12 @@ class BaseController extends Controller
             'status' => 0,
             'error' => '',
             'data' => [
-                'list' => [
-                    'items' => $data,
-                    '_meta' => [
-                        'totalCount' => $pagination->totalCount,
-                        'pageCount' => $pagination->getPageCount(),
-                        'currentPage' => $pagination->getPage() + 1,
-                        'perPage' => $pagination->getPageSize(),
-                    ],
+                'list' => $data,
+                '_meta' => [
+                    'totalCount' => $pagination->totalCount,
+                    'pageCount' => $pagination->getPageCount(),
+                    'currentPage' => $pagination->getPage() + 1,
+                    'perPage' => $pagination->getPageSize(),
                 ],
             ],
         ];
